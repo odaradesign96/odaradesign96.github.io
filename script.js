@@ -13,13 +13,16 @@ mainNav?.querySelectorAll('a').forEach((link) => {
   });
 });
 
-// Manejo del enlace "Inicio" para volver al header
+// Manejo del enlace "Inicio" para volver al header (incluye logo y enlace del menú)
 document.querySelectorAll('a[href="#inicio"]').forEach((link) => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
     const header = document.getElementById('inicio');
     if (header) {
       header.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Cerrar el menú si está abierto
+      mainNav?.classList.remove('is-open');
+      menuToggle?.setAttribute('aria-expanded', 'false');
     }
   });
 });
