@@ -13,6 +13,17 @@ mainNav?.querySelectorAll('a').forEach((link) => {
   });
 });
 
+// Manejo del enlace "Inicio" para volver al header
+document.querySelectorAll('a[href="#inicio"]').forEach((link) => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const header = document.getElementById('inicio');
+    if (header) {
+      header.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -34,6 +45,7 @@ form?.addEventListener('submit', (event) => {
   note.textContent = 'Formulario de demostración: conecta Formspree, HubSpot, Brevo u otro servicio para recibir los mensajes.';
   note.style.color = '#57c9ef';
 });
+
 const counters = document.querySelectorAll(".counter");
 
 const counterObserver = new IntersectionObserver(
