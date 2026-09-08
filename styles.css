@@ -428,8 +428,9 @@ h3 { margin-bottom: 10px; font-size: 20px; }
   }
   
   .client-logo {
-    min-width: 240px;
-    height: 120px;
+      min-width: 160px;    /* Antes: 120px */
+    height: 90px;        /* Antes: 60px */
+    padding: 0 20px;
   }
 }
 @keyframes scrollBidireccional {
