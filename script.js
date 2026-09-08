@@ -6,24 +6,11 @@ menuToggle?.addEventListener('click', () => {
   menuToggle.setAttribute('aria-expanded', String(open));
 });
 
-mainNav?.querySelectorAll('a').forEach((link) => {
+// Cerrar menú al hacer clic en cualquier enlace de navegación
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener('click', () => {
     mainNav.classList.remove('is-open');
     menuToggle?.setAttribute('aria-expanded', 'false');
-  });
-});
-
-// Manejo del enlace "Inicio" para volver al header (incluye logo y enlace del menú)
-document.querySelectorAll('a[href="#inicio"]').forEach((link) => {
-  link.addEventListener('click', (e) => {
-    e.preventDefault();
-    const header = document.getElementById('inicio');
-    if (header) {
-      header.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      // Cerrar el menú si está abierto
-      mainNav?.classList.remove('is-open');
-      menuToggle?.setAttribute('aria-expanded', 'false');
-    }
   });
 });
 
