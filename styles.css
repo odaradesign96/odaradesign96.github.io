@@ -19,7 +19,7 @@
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
-  font-family: CenturyGothic, AppleGothic, sans-serif;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, Arial, sans-serif;
   color: var(--text);
   background: var(--white);
   line-height: 1.6;
@@ -98,14 +98,14 @@ h2 { margin-bottom: 18px; font-size: clamp(32px, 4vw, 50px); color: var(--ink); 
 h3 { margin-bottom: 10px; font-size: 20px; }
 .hero-lead { max-width: 650px; margin: 0 0 30px; color: #4a6573; font-size: 18px; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
-.button { display: inline-flex; justify-content: center; align-items: center; min-height: 48px; padding: 12px 22px; border: 1px solid transparent; border-radius: 999px; font-weight: 800; cursor: point[...]
+.button { display: inline-flex; justify-content: center; align-items: center; min-height: 48px; padding: 12px 22px; border: 1px solid transparent; border-radius: 999px; font-weight: 800; cursor: pointer; transition: .2s ease; }
 .button:hover { transform: translateY(-2px); }
 .button-primary { background: var(--blue); color: #fff; box-shadow: 0 12px 25px rgba(7,152,232,.25); }
 .button-primary:hover { background: var(--blue-dark); }
 .button-secondary { border-color: #bdd6e1; color: var(--blue-dark); background: rgba(255,255,255,.72); }
 .hero-card { position: relative; border: 1px solid rgba(7,152,232,.16); border-radius: 34px; background: rgba(255,255,255,.7); box-shadow: var(--shadow); overflow: hidden; }
 .hero-card img { width: 100%; min-height: 420px; object-fit: cover; }
-.hero-badge { position: absolute; left: 22px; bottom: 22px; display: flex; align-items: center; gap: 9px; padding: 10px 14px; border-radius: 999px; background: rgba(7,19,27,.88); color: #fff; font-siz[...]
+.hero-badge { position: absolute; left: 22px; bottom: 22px; display: flex; align-items: center; gap: 9px; padding: 10px 14px; border-radius: 999px; background: rgba(7,19,27,.88); color: #fff; font-size: 11px; font-weight: 700; }
 .badge-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 5px rgba(149,211,79,.16); }
 .location-strip { background: #e7f8ea; border-top: 1px solid #c6ebc9; border-bottom: 1px solid #c6ebc9; }
 .location-inner { min-height: 48px; display: flex; align-items: center; justify-content: center; gap: 9px; font-size: 13px; }
@@ -273,7 +273,7 @@ h3 { margin-bottom: 10px; font-size: 20px; }
   background: var(--blue);
 }
 .sector-visual { position: relative; min-height: 440px; background: linear-gradient(145deg, #7e9797, #2f4a51 42%, #d39c55 100%); overflow: hidden; }
-.sector-visual::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(120deg, transparent 0 40%, rgba(255,255,255,.14) 41% 42%, transparent 43%), repeating-linear-gradi[...]
+.sector-visual::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(120deg, transparent 0 40%, rgba(255,255,255,.14) 41% 42%, transparent 43%), repeating-linear-gradient(90deg, transparent 0 2px, rgba(0,0,0,.03) 2px 4px); }
 .sector-overlay { position: absolute; inset: 0; background: radial-gradient(circle at 70% 25%, rgba(255,191,94,.32), transparent 28%), linear-gradient(180deg, transparent 30%, rgba(3,8,12,.78)); }
 .sector-visual span { position: absolute; left: 28px; bottom: 24px; z-index: 2; color: #fff; font-size: 15px; font-weight: 800; text-transform: uppercase; letter-spacing: .12em; }
 .sector-copy { padding: 58px; align-self: center; }
@@ -303,7 +303,7 @@ h3 { margin-bottom: 10px; font-size: 20px; }
 .contact-form { padding: 30px; border: 1px solid rgba(255,255,255,.12); border-radius: 22px; background: rgba(255,255,255,.055); }
 .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .contact-form label { display: grid; gap: 7px; margin-bottom: 14px; color: #d6e6ec; font-size: 12px; font-weight: 700; }
-.contact-form input, .contact-form textarea { width: 100%; border: 1px solid rgba(255,255,255,.18); border-radius: 10px; background: rgba(255,255,255,.09); color: #fff; padding: 13px 14px; outline: 0;[...]
+.contact-form input, .contact-form textarea { width: 100%; border: 1px solid rgba(255,255,255,.18); border-radius: 10px; background: rgba(255,255,255,.09); color: #fff; padding: 13px 14px; outline: 0; }
 .contact-form input:focus, .contact-form textarea:focus { border-color: #48c0ec; box-shadow: 0 0 0 3px rgba(72,192,236,.12); }
 .button-full { width: 100%; border: 0; }
 .form-note { margin: 10px 0 0; color: #77909b; font-size: 11px; }
@@ -352,7 +352,7 @@ h3 { margin-bottom: 10px; font-size: 20px; }
 
 @media (max-width: 1020px) {
   .menu-toggle { display: block; }
-  .main-nav { position: absolute; left: 20px; right: 20px; top: 84px; display: none; flex-direction: column; align-items: stretch; padding: 22px; border-radius: 18px; background: #047bbf; box-shadow: [...]
+  .main-nav { position: absolute; left: 20px; right: 20px; top: 84px; display: none; flex-direction: column; align-items: stretch; padding: 22px; border-radius: 18px; background: #047bbf; box-shadow: var(--shadow); }
   .main-nav.is-open { display: flex; }
   .main-nav .nav-cta { text-align: center; }
   .hero-grid, .split-grid, .process-header, .process-layout, .environmental-grid, .contact-grid { grid-template-columns: 1fr; gap: 42px; }
@@ -370,16 +370,6 @@ h3 { margin-bottom: 10px; font-size: 20px; }
   .brand { width: 150px; }
   .hero-grid { padding: 55px 0; }
   h1 { font-size: clamp(32px, 8vw, 48px); }
-  
-  body {
-    font-family: "Century Gothic", "Trebuchet MS", Arial, sans-serif;
-  }
-
-  h1, h2, h3 {
-    font-family: "Century Gothic", "Trebuchet MS", Arial, sans-serif;
-    font-weight: 600;
-  }
-  
   .hero-card img { min-height: 320px; }
   .hero-visual { display: none; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); row-gap: 35px; }
