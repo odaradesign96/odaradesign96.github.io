@@ -321,12 +321,19 @@ h3 { margin-bottom: 10px; font-size: 20px; }
   right: 22px;
   bottom: 22px;
   z-index: 90;
+
   width: 58px;
   height: 58px;
-  border-radius: 50%;
+
+  border-radius: 20%;
+  overflow: hidden;
+
+  background: #25d366;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   text-decoration: none;
   transition: transform .2s ease;
   font-size: 0;
@@ -341,9 +348,10 @@ h3 { margin-bottom: 10px; font-size: 20px; }
   width: 100%;
   height: 100%;
   background-image: url('assets/icono whatsapp.webp');
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  border-radius: 20%;
 }
 
 .reveal { opacity: 0; transform: translateY(22px); transition: opacity .65s ease, transform .65s ease; }
